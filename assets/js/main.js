@@ -1,3 +1,4 @@
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -9,6 +10,19 @@ if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show-menu')
     })
+}
+
+const mySong = document.getElementById('song')
+const play = document.getElementById('icon')
+
+play.onclick = function(){
+    if(mySong.paused){
+        mySong.play()
+        play.src = 'assets/img/pause.png'
+    }else{
+        mySong.pause()
+        play.src = 'assets/img/play.png'
+    }
 }
 
 /*===== MENU HIDDEN =====*/
